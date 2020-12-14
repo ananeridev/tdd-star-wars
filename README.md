@@ -1,3 +1,5 @@
+[![license](https://img.shields.io/github/license/anabneri/ananeri.com.svg)](/license) 
+
 # TDD with Star Wars ✨🚀
 
 👉 This is a complete project using TDD, and Star Wars.
