@@ -12,7 +12,7 @@
 * Junit 5
 * JBDC Template
 
-# Run the project
+# Running the project
 
 ``` mvn clean install ```
 
