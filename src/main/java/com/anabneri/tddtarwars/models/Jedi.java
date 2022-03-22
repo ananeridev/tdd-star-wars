@@ -2,15 +2,12 @@ package com.anabneri.tddtarwars.models;
 
 public class Jedi {
 
-
     private int id;
     private String name;
     private int strenght;
     private int version;
 
-    public Jedi() {
-
-    }
+    public Jedi() { }
 
     public Jedi(int id, String name, int strenght, int version) {
         this.id = id;

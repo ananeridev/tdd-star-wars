@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-import com.anabneri.tddtarwars.repository.JediRepository;
+import com.anabneri.tddtarwars.repository.JediRepositoryImpl;
 import com.anabneri.tddtarwars.services.JediService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
@@ -28,14 +28,14 @@ public class JediTestService {
     private JediService service;
 
     @MockBean
-    private JediRepository repository;
+    private JediRepositoryImpl repository;
 
     @Test
     @DisplayName("Test findById Success")
     void testFindByIdSuccess() {
 
         Jedi mockJedi = new Jedi(1, "Jedi Name", 10, 1);
-        doReturn(Optional.of(mockJedi)).when(repository).findById(1);
+            doReturn(Optional.of(mockJedi)).when(repository).findById(1);
 
         Optional<Jedi> returnedJedi = service.findById(1);
 

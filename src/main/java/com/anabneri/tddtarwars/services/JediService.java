@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 import com.anabneri.tddtarwars.models.Jedi;
-import com.anabneri.tddtarwars.repository.JediRepository;
+import com.anabneri.tddtarwars.repository.JediRepositoryImpl;
 
 
 @Service
@@ -17,27 +17,27 @@ public class JediService {
 
     private static final Logger logger = LogManager.getLogger(JediService.class);
 
-    private final JediRepository jediRepository;
+    private final JediRepositoryImpl jediRepositoryImpl;
 
-    public JediService(JediRepository jediRepository) {
-        this.jediRepository = jediRepository;
+    public JediService(JediRepositoryImpl jediRepositoryImpl) {
+        this.jediRepositoryImpl = jediRepositoryImpl;
     }
 
     public Optional<Jedi> findById(Integer id) {
         logger.info("Find Jedi with id: {}", id);
-        return jediRepository.findById(id);
+        return jediRepositoryImpl.findById(id);
     }
 
     public List<Jedi> findAll() {
         logger.info("Find all Jedis on Galaxy");
-        return jediRepository.findAll();
+        return jediRepositoryImpl.findAll();
     }
 
     public Jedi save(Jedi jedi) {
         jedi.setVersion(1);
 
         logger.info("Save Jedi to the database: {}", jedi);
-        return jediRepository.save(jedi);
+        return jediRepositoryImpl.save(jedi);
     }
 
     public boolean update(Jedi jedi) {
