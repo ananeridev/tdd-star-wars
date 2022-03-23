@@ -1,4 +1,4 @@
-products:
+jedis:
   - id: 1
     name: "HanSolo"
     strenght: 50

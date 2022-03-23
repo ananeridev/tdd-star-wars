@@ -30,7 +30,7 @@ public class Jedi {
     public int getStrenght() {
         return strenght;
     }
-    public int getVersion() {
+    public Integer getVersion() {
         return version;
     }
     public void setVersion(int version) {
@@ -39,7 +39,7 @@ public class Jedi {
     public void setStrenght(int strenght) {
         this.strenght = strenght;
     }
-    public int getId() {
+    public Integer getId() {
         return id;
     }
     public void setId(int id) {
